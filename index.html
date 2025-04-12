@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Solar System</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- External dependencies -->
+        <script src="scripts/dependencies/p5.min.js"></script>
+        <script src="scripts/dependencies/p5.easycam.js"></script>
+        <script src="scripts/dependencies/color-scheme.min.js"></script>
+        
+        <!-- Home made code -->
+        <script src="scripts/classes/planetTextures.js"></script>
+        <script src="scripts/classes/star.js"></script>
+        <script src="scripts/classes/asteriod.js"></script>
+        <script src="scripts/classes/planet.js"></script>
+        <script src="scripts/classes/sun.js"></script>
+        
+        <!-- Main canvas code -->
+        <script src="scripts/sketch.js"></script>
+    </head>
+    
+    <body>
+        <div id="canvasHolder"></div>
+        <div id="planetForm">
+            <form>
+                <div class="formElement">
+                    <label>Size</label>
+                    <input type="range" min="2" max="100" value="50" class="slider" id="sizeSlider">
+                </div>
+                <div class="formElement">
+                    <label>Weight: </label>
+                    <input type="range" min="2" max="200" value="50" class="slider" id="weightSlider">
+                </div>
+                <div class="formElement">
+                    <label>Color:</label>
+                    <input type="range" min="0" max="1530" value="50" class="slider" id="colorSlider">
+                </div>
+                <div class="formElement">
+                    <label>Gas:</label>
+                    <input type="checkbox" id="gasGiant">
+                </div>
+                <div class="formElement">
+                    <label>Frames</label>
+                    <input type="range" min="4" max="60" value="60" class="slider" id="frameSlider">
+                </div>
+            </form>
+            <br>
+            <p><u>Click and drag:</u> <br>Rotate camera.</p>
+            <p><u>Mouse scroll wheel:</u> <br>Zoom in and out.</p>
+            <p><u>Press R:</u> <br>Cycles camera through the planets.</p>
+            <br>
+        </div>
+        <div id="planetCreationText">
+            <div id="planetCreationStarted">
+                <p>Planet creation started!</p>
+                <p>Customize planet using the panel in the top-left of the screen.</p>
+                <p>Use arrow keys to select orbiting body and adjust orbit size.</p>
+                <p>Press E to finalize selection and create planet.</p>
+            </div>
+            <div id="planetCreationWaiting">
+                <p>Press E to start planet creation.</p>
+            </div>
+        </div>
+    </body>
+</html>
